@@ -47,20 +47,20 @@ Please cite SSD in your publications if it helps your research:
 ### Installation
 1. Get the code. We will call the directory that you cloned Caffe into `$CAFFE_ROOT`
   ```Shell
-  git clone https://github.com/weiliu89/caffe.git
+  git clone https://github.com/xllau/caffe.git
   cd caffe
-  git checkout ssd
+  git checkout -b ssd origin/ssd
   ```
 
 2. Build the code. Please follow [Caffe instruction](http://caffe.berkeleyvision.org/installation.html) to install all necessary packages and build it.
   ```Shell
-  # Modify Makefile.config according to your Caffe installation.
   cp Makefile.config.example Makefile.config
+  #modify the Makefile.config to install caffe
   make -j8
   # Make sure to include $CAFFE_ROOT/python to your PYTHONPATH.
-  make py
-  make test -j8
+  make pycaffe
   # (Optional)
+  make test -j8
   make runtest -j8
   ```
 
